@@ -1,0 +1,32 @@
+name: "GHAS check"
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    # The branches below must be a subset of the branches above
+    branches: [ master ]
+  workflow_dispatch:
+#   schedule:
+#     - cron: '*/5 * * * *'
+    
+
+jobs:
+  analyze:
+    name: Analyze
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+      # Get full history for spotless ratchetFrom
+      with:
+        fetch-depth: 0
+
+    # Initializes the CodeQL tools for scanning.
+    - name: Alert Manager
+      uses: adrienpessu/ghas-config-check@main
