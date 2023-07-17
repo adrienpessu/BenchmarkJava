@@ -18,7 +18,7 @@ jobs:
     permissions:
       actions: read
       contents: read
-      security-events: write
+      security-events: read
       issues: write
 
     steps:
