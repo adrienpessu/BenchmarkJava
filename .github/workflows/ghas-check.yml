@@ -29,5 +29,5 @@ jobs:
         fetch-depth: 0
 
     # Initializes the CodeQL tools for scanning.
-    - name: Alert Manager
+    - name: Alerts config check
       uses: adrienpessu/ghas-config-check@main
