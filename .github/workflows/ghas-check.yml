@@ -32,3 +32,4 @@ jobs:
       uses: adrienpessu/ghas-config-check@main
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
+        debug: 'true'
