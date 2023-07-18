@@ -31,4 +31,4 @@ jobs:
     - name: Alerts config check
       uses: adrienpessu/ghas-config-check@main
       with:
-        token: ${{ env.GITHUB_TOKEN }}
+        token: ${{ secrets.GITHUB_TOKEN }}
